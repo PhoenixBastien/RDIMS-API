@@ -38,7 +38,7 @@ $chunkSize = 10000
 
 for ($i = 0; $i -lt $toDelete.Count; $i += $chunkSize) {
     # split array into chunks of document numbers
-    Write-Host "Searching for documents from $i to $($i + $chunkSize - 1)..."
+    Write-Host "Searching for documents $($i + 1) to $($i + $chunkSize)..."
     $chunk = $toDelete[$i..($i + $chunkSize - 1)]
 
     # search for chunk of document numbers
